@@ -49,8 +49,9 @@ Install the requirements
 `pip install -r requirements.txt`
 
 
-## Edit the bs.py script
-The script uses BeautifulSoup to get rid of the HTML, leaving just the text.
+## Extract Plain Text
+
+The bs.py script uses BeautifulSoup to get rid of the HTML, leaving just the text.
 
 There are two variables to alter, if desired, at the top of the script. 
 - 'path' = The path to the HTML files you want to remove HTML from.
