@@ -4,12 +4,13 @@
 import os
 from bs4 import BeautifulSoup
 
+import chardet
 
 # Set the path of the directory files to scan
 path = './AlstonLHD'
 
 # Folder to save the extracted text files
-save_folder = 'just_text'
+save_folder = 'textfiles'
 
 # get all of the contents in the directory and store them as a list named
 # "files"
@@ -25,9 +26,14 @@ with os.scandir(path) as files:
             # print out the file name
             print(file.path)
 
+            # Get the character encoding
+            rawdata = open(file.path, 'rb').read()
+            result = chardet.detect(rawdata)
+            char_enc = result['encoding']
+
             # open the file for reading, and store the contents of the file in
             # the variable named "file_contents"
-            with open(file.path) as file_contents:
+            with open(file.path, encoding=char_enc) as file_contents:
 
                 # Use a try..except so that if we get an error on one file the
                 # whole script doesn't stop
