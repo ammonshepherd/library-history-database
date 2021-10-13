@@ -25,12 +25,13 @@ Download a copy of this repository. Open a terminal, or if using VS Code open
 the terminal pane.
 
 If you are in the folder where you want this project, then type in 
-`https://github.com/ammonshepherd/library-history-database.git`
+`git clone https://github.com/ammonshepherd/library-history-database.git
+library-history-database`
 
 This will make a directory called 'library-history-database' in your folder
 with all of the contents in this GitHub repo located inside.
 
-Chage directory into that folder:
+Change into that folder:
 
 `cd library-history-database`
 
@@ -47,6 +48,12 @@ Activate the virtual environment by running the command:
 Install the requirements
 
 `pip install -r requirements.txt`
+
+- When you're done working on this, you can deactivate the virtual environment
+  by typing `deactivate`. 
+- Next time you want to work on this, if you are in the
+  'library-history-database' directory, just type `source .venv/bin/activate`
+  again.
 
 
 ## Extract Plain Text
